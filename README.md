@@ -1,4 +1,4 @@
-# R_for_Bioinformatics
+# R Shiny Workshop
 
 ## Table of Contents
 
