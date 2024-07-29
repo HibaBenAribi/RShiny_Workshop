@@ -15,10 +15,6 @@ expression$diffexpressed <- "Not Significant"
 expression$diffexpressed[expression$log2FoldChange  > deg_logFC  & expression$pvalue < deg_pval ] <- "Upregulated genes"
 expression$diffexpressed[expression$log2FoldChange  < -deg_logFC & expression$pvalue < deg_pval] <- "Downregulated genes"
 
-# Count the number of each type
-gene_counts <- table(expression$diffexpressed)
-print(gene_counts)
-
 # Visualize the results as a volcano plot
 ggplot(data=expression, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed)) +
   geom_point() + theme_minimal() + theme(text = element_text(size = 15))
